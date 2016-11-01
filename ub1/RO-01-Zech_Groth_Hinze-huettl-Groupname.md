@@ -15,6 +15,7 @@ __Groupname TBA__
 * Larissa Zech
 * Niels Groth
 * Alexander Hinze-Hüttl
+
 ## 3. Data recording from the robot model car
 
 ```bash
