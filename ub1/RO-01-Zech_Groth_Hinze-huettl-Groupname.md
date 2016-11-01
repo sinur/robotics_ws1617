@@ -3,8 +3,8 @@ __Groupname TBA__
 
 |__Name__                    | MatrikelNr.   | Mail  |
 |----------------------------|---|---|
-| Larissa Zech               | tba   | tba  |
-|  Niels Groth               | tba | tba  |
+| Larissa Zech               | 4594149   | larissa.zech@fu-berlin.de  |
+|  Niels Groth               | 4573930 | niels.groth@fu-berlin.de  |
 |   Alexander Hinze-Hüttl    | 4578322   | hinze.alex@gmail.com   |
 
 ## 1. Installation:
