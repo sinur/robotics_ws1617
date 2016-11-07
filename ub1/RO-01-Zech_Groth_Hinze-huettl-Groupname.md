@@ -1,11 +1,13 @@
 # Robotics WS 16/17
-__Groupname TBA__
+__Group Pingu 🐧__
+
 
 |__Name__                    | MatrikelNr.   | Mail  |
 |----------------------------|---|---|
 | Larissa Zech               | 4594149   | larissa.zech@fu-berlin.de  |
 |  Niels Groth               | 4573930 | niels.groth@fu-berlin.de  |
 |   Alexander Hinze-Hüttl    | 4578322   | hinze.alex@gmail.com   |
+
 
 ## 1. Installation:
 ![](roscore.png)
