@@ -1,5 +1,7 @@
 # Robotics ws 16/16
 
+Use the [stackedit.io](https://stackedit.io/editor) online markdown editor with LaTeX support, or use [GitHub's Atom](https://atom.io/) editor with  [LaTeX plugin](https://atom.io/packages/markdown-preview-enhanced).
+
 ## install ros
 * look [here](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
