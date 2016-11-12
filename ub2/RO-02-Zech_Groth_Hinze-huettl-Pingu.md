@@ -76,15 +76,23 @@ $y_2' = x_1 * \cos(-\theta_2) - y_1 * \sin(-\theta_2)$
 3D-Rotation matrix has $3\times3$ values. The matrix is defined by three angles _pitch,yaw_ and _roll_. Each value $r_{xy}$ is defined by these angles combined with trigonomic functions:
 ![](http://msl.cs.uiuc.edu/planning/img822.gif)
 * You can choose three random angles to calculate $R$.
-* You can choose three random $r$ values when their calculation contain all three angles, to derive the angles. Eg:
+* You can choose three random $r$ values when their calculation contain all three angles, to derive the angles step step. Eg:
   * $\beta = \sin^{-1}(-r_{13})$
   * $\gamma = \sin^{-1}(\frac{r_{23}}{\cos(\beta)})$
   * $\alpha = \cos^{-1}( \frac{r_{11}}{\cos(\beta)} )$
 
 ### b)
+
 ### c)
 
 ## 3. Working with the Car
 ### a)
 1. Turn the car on. Press the green button twice.
-2. Export all vars to
+2. Export all vars to terminal (see README.md)
+3. Start roscore?
+4. List all topics `rostopic list` make sure you see `/manual_control/speed`
+5. run `rqt_graph` to start the graph and add `/motor_control/twist/linear/x` as topic.
+6. change motor speed: `rostopic pub manual_control/speed std_msgs/Int16 '{data: 500}'`
+7. screenshot plot
+
+### b)
