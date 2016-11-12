@@ -1,16 +1,12 @@
-# Robotics WS 16/17
-__Group Pingu 🐧__
+# Robotics WS 16/17 - Group _Pingu_ 🐧
 
 __Assignment: 2__
-
 
 |  Name                      | MatrikelNr.   | Mail                       |
 |----------------------------|---------------|----------------------------|
 | Larissa Zech               | 4594149       | larissa.zech@fu-berlin.de  |
 | Niels Groth                | 4573930       | niels.groth@fu-berlin.de   |
 | Alexander Hinze-Hüttl      | 4578322       | hinze.alex@gmail.com       |
-
-__Online Markdown editor with LaTex support: [stackedit.io](https://stackedit.io/editor)__
 
 ## 1. Coordinate Transformation
 ### a)
@@ -76,6 +72,7 @@ $y_2' = x_1 * \cos(-\theta_2) - y_1 * \sin(-\theta_2)$
 
 
 ## 2. Rotation Matrix as an Operator
+### a)
 3D-Rotation matrix has $3\times3$ values. The matrix is defined by three angles _pitch,yaw_ and _roll_. Each value $r_{xy}$ is defined by these angles combined with trigonomic functions:
 ![](http://msl.cs.uiuc.edu/planning/img822.gif)
 * You can choose three random angles to calculate $R$.
@@ -84,4 +81,10 @@ $y_2' = x_1 * \cos(-\theta_2) - y_1 * \sin(-\theta_2)$
   * $\gamma = \sin^{-1}(\frac{r_{23}}{\cos(\beta)})$
   * $\alpha = \cos^{-1}( \frac{r_{11}}{\cos(\beta)} )$
 
-## 3.
+### b)
+### c)
+
+## 3. Working with the Car
+### a)
+1. Turn the car on. Press the green button twice.
+2. Export all vars to
