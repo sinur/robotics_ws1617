@@ -64,6 +64,8 @@ Lösung Niels:
 * $x_2 = L_2 \cdot cos(\theta_2) + x_1$
 * $y_2 = -L_2 \cdot sin(\theta_2) + y1$
 
+[ [cos (-40) , -sin(-40) , 0 ] , [ sin(-40) , cos(-40) , 0 ] , [0,0,1] ]  * {10,0,0}
+
 ### b)
 __Partial derivative respect to $\theta_1$__
 where $\theta_2,x,y$ are constants:
@@ -100,15 +102,50 @@ __Partial derivatives for $y_2$:__
 ### a)
 3D-Rotation matrix has $3\times3$ values. The matrix is defined by three angles _pitch,yaw_ and _roll_. Each value $r_{xy}$ is defined by these angles combined with trigonomic functions:
 ![](http://msl.cs.uiuc.edu/planning/img822.gif)
-* You can choose three random angles to calculate $R$.
-* You can choose three random $r$ values when their calculation contain all three angles, to derive the angles step step. Eg:
-  * $\beta = \sin^{-1}(-r_{13})$
-  * $\gamma = \sin^{-1}(\frac{r_{23}}{\cos(\beta)})$
-  * $\alpha = \cos^{-1}( \frac{r_{11}}{\cos(\beta)} )$
+* You can simply choose three random angles to calculate $R$.
+
+
+Let $(\alpha = 10^\circ, \beta = 306^\circ, \gamma = 164^\circ)$ be three random angles.
+
+Here is the Matrix:
+$$
+R= \begin{pmatrix}
+0.579 & -0.053 & 0.814 \\
+0.102 & -0.985 & -0.136\\
+0.809 & 0.162 & -0.565
+\end{pmatrix}
+$$
 
 ### b)
+Homogeneous transformation matrix. See the rotation part in the left top corner
+extendet by the translation part in the last column:
+$$
+M = \begin{pmatrix}
+0.579 & -0.053 & 0.814 & 3 \\
+0.102 & -0.985 & -0.136 & 2\\
+0.809 & 0.162 & -0.565 & 5\\
+0 & 0 & 0 & 1
+\end{pmatrix}
+$$
 
 ### c)
+First make $(1,2,3)^T \rightarrow (1,2,3,1)^T$ then calc $M * (1,2,3,1)^T$:
+
+$
+x = 0.579 * 1 -0.053 * 2 + 0.814 * 3 + 3 * 1 = 5.915
+$
+
+$
+y = 0.102 * 1 -0.985 * 2  -0.136 * 3 + 2 * 1 = -0.276
+$
+
+$
+z = 0.809 * 1 + 0.162 * 2 -0.565 * 3 + 5 * 1 = 4,438
+$
+
+$
+w = 0 * 1 + 0 * 2 + 0 * 3 + 1*1 = 1
+$
 
 ## 3. Working with the Car
 ### a)
