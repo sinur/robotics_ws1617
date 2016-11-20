@@ -55,6 +55,13 @@ $y_1 = x * \sin(-\theta_1) + y * \cos(-\theta_1)$
 * $x_2 = x_1 * \cos(-\theta_2) - y_1 * \sin(-\theta_2) + L_2$
 $y_2 = x_1 * \sin(-\theta_2) + y_1 * \cos(-\theta_2)$
 
+
+Lösung Niels:
+* $x_1 = L_1 \cdot cos(\theta_1)$
+* $y_1 = -L_1 \cdot sin(\theta_1)$
+* $x_2 = L_2 \cdot cos(\theta_2) + x_1$
+* $y_2 = -L_2 \cdot sin(\theta_2) + y1$
+
 ### b)
 __Partial derivative respect to $\theta_1$__
 where $\theta_2,x,y$ are constants:
@@ -69,6 +76,22 @@ __Partial derivative respect to $\theta_2$:__
 where $\theta_1,x_1,y_1$ are constants:
 * $x_2'(\theta_1) = - x_1 * \sin(-\theta_2) - y_1 * \cos(-\theta_2)$
 $y_2' = x_1 * \cos(-\theta_2) - y_1 * \sin(-\theta_2)$
+
+Lösung Niels:
+* $x_2 = L_2 \cdot cos(\theta_2) + L_1 \cdot  cos(\theta_1)$
+* $y_2 = -L_1 \cdot sin(\theta_2) - L_1 \cdot sin(\theta_1)$
+
+__Partial derivative for $x_2$:__
+* $\frac{\delta x_2}{\delta \theta_1} = -L_1 \cdot sin(\theta_1)$
+* $\frac{\delta x_2}{\delta \theta_2} = -L_2 \cdot sin(\theta_2)$
+* $\frac{\delta x_2}{\delta L_1} = -sin(\theta_1)$
+* $\frac{\delta x_2}{\delta L_2} = -sin(\theta_2)$
+
+__Partial derivatives for $y_2$:__
+* $\frac{\delta y_2}{\delta \theta_1} = -L_1 \cdot cos(\theta_1)$
+* $\frac{\delta y_2}{\delta \theta_2} = -L_2 \cdot cos(\theta_2)$
+* $\frac{\delta y_2}{\delta L_1} = -sin(\theta_1)$
+* $\frac{\delta y_2}{\delta L_2} = -sin(\theta_2)$
 
 
 ## 2. Rotation Matrix as an Operator
