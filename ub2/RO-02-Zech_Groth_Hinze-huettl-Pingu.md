@@ -11,77 +11,14 @@ __Assignment: 2__
 ## 1. Coordinate Transformation
 ### a)
 
-__rotation and translation matrices:__
-
-$
-T_1 = \begin{pmatrix}
-  1 & 0 & L_1\\
-  0 & 1 & 0\\
-  0 & 0 & 1
-\end{pmatrix}
-$
-
-$ R_1 =
- \begin{pmatrix}
-  \cos -\theta_1 & -\sin -\theta_1 & 0\\
-  \sin -\theta_1 & \cos -\theta_1 & 0\\
-  0 & 0 & 1
-\end{pmatrix}
-$
-
-$
-R_2 = \begin{pmatrix}
- \cos \theta_2 & -\sin \theta_2 & 0\\
- \sin \theta_2 & \cos \theta_2 & 0\\
- 0 & 0 & 1
-\end{pmatrix}
-$
-
-$ T_2 = \begin{pmatrix}
-  1 & 0 & L_2\\
-  0 & 1 & 0\\
-  0 & 0 & 1
-\end{pmatrix}
-$
-
-__Calculate $x_1,y_1,x_2,y_2$:__
-
-* $(x_1,y_1,w_1)^T = R_1 * T_1 * (x,y,1)^T$
-$(x_2,y_2,w_2)^T = R_2 * T_2 (x_1,y_1,w_1)^T$
-
-
-* $x_1 = x * \cos(-\theta_1) - y * \sin(-\theta_1) + L_1*1$
-$y_1 = x * \sin(-\theta_1) + y * \cos(-\theta_1)$
-
-
-* $x_2 = x_1 * \cos(-\theta_2) - y_1 * \sin(-\theta_2) + L_2$
-$y_2 = x_1 * \sin(-\theta_2) + y_1 * \cos(-\theta_2)$
-
-
-Lösung Niels:
 * $x_1 = L_1 \cdot cos(\theta_1)$
 * $y_1 = -L_1 \cdot sin(\theta_1)$
 * $x_2 = L_2 \cdot cos(\theta_2) + x_1$
 * $y_2 = -L_2 \cdot sin(\theta_2) + y1$
 
-[ [cos (-40) , -sin(-40) , 0 ] , [ sin(-40) , cos(-40) , 0 ] , [0,0,1] ]  * {10,0,0}
 
 ### b)
-__Partial derivative respect to $\theta_1$__
-where $\theta_2,x,y$ are constants:
-* $x_1'(\theta_1) = -x*\sin(-\theta_1) - y*\cos(-\theta_1)$
-$y_1'(\theta_1) = x*\cos(-\theta_1) - y*\sin(-\theta_1)$
 
-
-* $x_2'(\theta_1) = x_1'(\theta_1) * \cos(-\theta_2) - y_1'(\theta_1) * \sin(-\theta_2)$
-$y_2'(\theta_1) = x_1'(\theta_1) * \sin(-\theta_2) + y_1'(\theta_1)* \cos(-\theta_2)$
-
-__Partial derivative respect to $\theta_2$:__
-where $\theta_1,x_1,y_1$ are constants:
-* $x_2'(\theta_1) = - x_1 * \sin(-\theta_2) - y_1 * \cos(-\theta_2)$
-$y_2' = x_1 * \cos(-\theta_2) - y_1 * \sin(-\theta_2)$
-
-Lösung Niels:
 * $x_2 = L_2 \cdot cos(\theta_2) + L_1 \cdot  cos(\theta_1)$
 * $y_2 = -L_1 \cdot sin(\theta_2) - L_1 \cdot sin(\theta_1)$
 
@@ -135,7 +72,7 @@ $
 x = 0.579 * 1 -0.053 * 2 + 0.814 * 3 + 3 * 1 = 5.915
 $
 
-$
+$git add
 y = 0.102 * 1 -0.985 * 2  -0.136 * 3 + 2 * 1 = -0.276
 $
 
@@ -150,8 +87,10 @@ $
 ## 3. Working with the Car
 ### a)
 We hade some problems while publishing the new speed. Thats why we set the speed to `1000` instead of `500`:
+
 ![](Screenshot_2016-11-14_16-17-44.png)
 
 ### b)
-To move the card foreward, we need to publish a negative speed. Thats why the plot of the speed is negative.
+To move the car foreward, we need to publish a negative speed. Thats why the plot of the speed is negative. We also negated the distance in the plot to make it visible. Note how the speed goes down at time 110 where the the distance is very low:
+
 ![](Screenshot_2016-11-14_17-23-06.png)
