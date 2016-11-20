@@ -44,6 +44,8 @@ $ T_2 = \begin{pmatrix}
 \end{pmatrix}
 $
 
+__Calculate $x_1,y_1,x_2,y_2$:__
+
 * $(x_1,y_1,w_1)^T = R_1 * T_1 * (x,y,1)^T$
 $(x_2,y_2,w_2)^T = R_2 * T_2 (x_1,y_1,w_1)^T$
 
@@ -110,12 +112,9 @@ __Partial derivatives for $y_2$:__
 
 ## 3. Working with the Car
 ### a)
-1. Turn the car on. Press the green button twice.
-2. Export all vars to terminal (see README.md)
-3. Start roscore?
-4. List all topics `rostopic list` make sure you see `/manual_control/speed`
-5. run `rqt_graph` to start the graph and add `/motor_control/twist/linear/x` as topic.
-6. change motor speed: `rostopic pub manual_control/speed std_msgs/Int16 '{data: 500}'`
-7. screenshot plot
+We hade some problems while publishing the new speed. Thats why we set the speed to `1000` instead of `500`:
+![](Screenshot_2016-11-14_16-17-44.png)
 
 ### b)
+To move the card foreward, we need to publish a negative speed. Thats why the plot of the speed is negative.
+![](Screenshot_2016-11-14_17-23-06.png)
