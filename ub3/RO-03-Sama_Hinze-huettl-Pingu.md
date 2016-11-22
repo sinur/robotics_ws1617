@@ -96,12 +96,14 @@ $
 R = I + \sin(\theta) * K + (1-\cos(\theta)) * K^2
 $
 
-$$
-R = \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 &  1\end{pmatrix} +
+$
+R = \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} +
 \begin{pmatrix} 0 & 0 & 0.22\\ 0 & 0 & -0.22\\ -0.22 & 0.2 & 0 \end{pmatrix} +
 \begin{pmatrix} -0.98 & 0.98 & 0\\ 0.98 & -0.98 & 0\\ 0 & 0 & -1.95\end{pmatrix}
 = \begin{pmatrix} 0.02 & 0.98 & 0.22 \\ 0.98 & 0.2 & -0.22\\ -0.22 & 0.22 & -0.95 \end{pmatrix}
-$$
+$
+
+
 Now let python check, if our matrix is orthogonal ($RR^T = I$):
 ```python
 >>> np.around(np.dot(R,np.transpose(R)))
@@ -113,3 +115,14 @@ array([[ 1.,  0.,  0.],
 ### c)
 
 ### d)
+$
+P_{A_{ROT}} = P_A * \cos(\theta) + K*P_A  * \sin(\theta) + k(k*P_A)(1-\cos(\theta))
+$
+$
+= (0,0,-2.85)^T + (0.65,-0.65,0)^T + 0
+$
+$
+= (0.65,-0.65,-2.85)^T
+$
+
+### e)
