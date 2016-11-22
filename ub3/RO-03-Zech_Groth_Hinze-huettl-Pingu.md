@@ -13,9 +13,13 @@ __Assignment: 3__
 ### a)
 Given $r$, $\theta$ and $h$. The cartesian coordinates (x,y,z) can then be defined as:\\
 $$
-cos(\theta)=\frac{x}{r} \Leftrightarrow x=cos(\theta)\circr\\
-sin(\theta)=\frac{y}{r} \Leftrightarrow y=sin(\theta)\circr\\
-z=h\\
+cos(\theta)=\frac{x}{r} \Leftrightarrow x=cos(\theta)
+$$
+$$
+sin(\theta)=\frac{y}{r} \Leftrightarrow y=sin(\theta)
+$$
+$$
+z=h
 $$
 First, $z=2$ is the height above the xy plane. The angle can be calculated by
 $\theta = atan2(1,3 ) = 18.42^\circ$, where:
@@ -31,9 +35,13 @@ Here is a plot:
 ### b)
 Given $r$, $\alpha$ and $\beta$. The cartesian coordinates (x,y,z) can then be defined as:
 $$
-x=r\circsin(\alpha)\circcos(\beta)
-y=r\circsin(\alpha)\circsin(\beta)
-z=r\circcos(\alpha)
+x=r\sin(\alpha)\cos(\beta)
+$$
+$$
+y=r\sin(\alpha)\sin(\beta)
+$$
+$$
+z=r\cos(\alpha)
 $$
 
 The length of the vector can be calculated by $r = \sqrt{3^2 + 1^2 + 2^2} = 3.74$
