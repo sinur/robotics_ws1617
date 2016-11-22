@@ -72,69 +72,43 @@ k_3 & 0 & -k_1\\
 0 & 0 & 2\\
 0 & 0 & -2\\
 -2 & 2 & 0
+\end{pmatrix} = \begin{pmatrix}
+0 & 0 & \frac{1}{\sqrt{2}} \\
+0 & 0 & -\frac{1}{\sqrt{2}} \\
+-\frac{1}{\sqrt {2}}  & \frac{1}{\sqrt{2}} & 0
 \end{pmatrix}
 $
-Now convert to Euler parameters:
-$
-\epsilon_0 = \cos \frac{\theta}{2} =  0.156
-$
-
-$
-\epsilon_1 = k_x \sin \frac{\theta}{2} = 1.976
-$
-
-$
-\epsilon_2 = k_y \sin \frac{\theta}{2} =  1.976
-$
-
-$
-\epsilon_2 = k_z \sin \frac{\theta}{2} =  0
-$
-
-Now calculated the rotation matrix:
-$$
-R={\begin{pmatrix}\cos \theta +k_{x}^{2}\left(1-\cos \theta \right)&k_{x}k_{y}\left(1-\cos \theta \right)-k_{z}\sin \theta &k_{x}k_{z}\left(1-\cos \theta \right)+k_{y}\sin \theta \\k_{y}k_{x}\left(1-\cos \theta \right)+k_{z}\sin \theta &\cos \theta +k_{y}^{2}\left(1-\cos \theta \right)&k_{y}k_{z}\left(1-\cos \theta \right)-k_{x}\sin \theta \\k_{z}k_{x}\left(1-\cos \theta \right)-k_{y}\sin \theta &k_{z}k_{y}\left(1-\cos \theta \right)+k_{x}\sin \theta &\cos \theta +k_{z}^{2}\left(1-\cos \theta \right)\end{pmatrix}}
-$$
 
 
-$$
-R={\begin{pmatrix}
-6.85      &   7.804   &    0.61 \\
-7.804     &   6.85         &   -0.61 \\
--0.61     &   0.61        & -0.951
-\end{pmatrix}}
-$$
 
-
+$
+K^2 = \begin{pmatrix}
+-0.5 & 0.5 & 0\\
+0.5 & -0.5 & 0\\
+0 &  0 & -1
+\end{pmatrix}
+$
+$\sin(\theta) = 0.31$
+$1-\cos(\theta) = 1.95$
 Calculate rotation matrix:
 
 $
 R = I + \sin(\theta) * K + (1-\cos(\theta)) * K^2
 $
 
-$ =  \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1 \end{pmatrix}  + 0.11* \begin{pmatrix}
- 0 & 0 & 2\\
- 0 & 0 & -2\\
- -2 & 2 & 0
- \end{pmatrix} + 1.95 *  \begin{pmatrix}
- 0 & 0 & 32\\
- 0 & 0 & 32\\
- 32 & 32 & 0
- \end{pmatrix}
-$
-
-$
-= \begin{pmatrix}
-1 & 0 & 62.62\\
-0 & 1 & 62.18\\
-62.18 & 62.62 & 1
-\end{pmatrix}
-$
-
-
-
-
-
+$$
+R = \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 &  1\end{pmatrix} +
+\begin{pmatrix} 0 & 0 & 0.22\\ 0 & 0 & -0.22\\ -0.22 & 0.2 & 0 \end{pmatrix} +
+\begin{pmatrix} -0.98 & 0.98 & 0\\ 0.98 & -0.98 & 0\\ 0 & 0 & -1.95\end{pmatrix}
+= \begin{pmatrix} 0.02 & 0.98 & 0.22 \\ 0.98 & 0.2 & -0.22\\ -0.22 & 0.22 & -0.95 \end{pmatrix}
+$$
+Now let python check, if our matrix is orthogonal ($RR^T = I$):
+```python
+>>> np.around(np.dot(R,np.transpose(R)))
+array([[ 1.,  0.,  0.],
+       [ 0.,  1.,  0.],
+       [ 0.,  0.,  1.]])
+```
 
 ### c)
 
