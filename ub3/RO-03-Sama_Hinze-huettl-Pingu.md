@@ -52,6 +52,41 @@ Here is a plot:
 
 
 ## Transformations
+### a)
+Lets build the rotations matrices:
+
+$R_z(\alpha) = \begin{pmatrix}
+ \cos(\alpha) & -\sin(\alpha)&, 0\\
+ \sin(\alpha) & \cos(\alpha) & 0\\
+ 0 & 0 & 1
+\end{pmatrix}$
+
+$
+R_y(\beta) = I
+$
+
+$
+R_x(\gamma) = \begin{pmatrix}
+1 & 0 & 0\\
+0 & \cos(\gamma)& -\sin(\gamma)\\
+0 & sin(\gamma)& \cos(\gamma)\\
+\end{pmatrix}
+$
+
+Multiply them:
+$
+R_B^A = R_z  R_y R_x = \begin{pmatrix}
+\cos(\alpha) & -sin(\alpha)\cos(\gamma) & \sin(\alpha) \sin(\gamma)\\
+\sin(\alpha) & \cos(\alpha) \cos(\gamma) & -\sin(\gamma) \cos(\alpha)\\
+0 & \sin(\gamma) & \cos(\gamma)
+\end{pmatrix}
+$
+
+### b)
+Use simple matrix multiplication here:
+$P^A = R_B^A * P^B
+$
+
 
 ## Rotations
 ### a)
@@ -115,7 +150,13 @@ array([[ 1.,  0.,  0.],
 
 ### c)
 
+
+
 ### d)
+$k*p_A = \vec{0}$
+
+$K * P_A = (2.12,-2.12,0)^T$
+
 $
 P_{A_{ROT}} = P_A * \cos(\theta) + K*P_A  * \sin(\theta) + k(k*P_A)(1-\cos(\theta))
 $
