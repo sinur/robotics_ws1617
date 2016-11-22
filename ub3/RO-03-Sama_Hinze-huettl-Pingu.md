@@ -104,7 +104,8 @@ R = \begin{pmatrix} 1 & 0 & 0\\ 0 & 1 & 0\\ 0 & 0 & 1\end{pmatrix} +
 $
 
 
-Now let python check, if our matrix is orthogonal ($RR^T = I$):
+Now let python check, if our matrix is orthogonal ($RR^T = I$). Lets round up
+to
 ```python
 >>> np.around(np.dot(R,np.transpose(R)))
 array([[ 1.,  0.,  0.],
@@ -125,4 +126,6 @@ $
 = (0.65,-0.65,-2.85)^T
 $
 
+Here is a plot:
+![](img5.png)
 ### e)
