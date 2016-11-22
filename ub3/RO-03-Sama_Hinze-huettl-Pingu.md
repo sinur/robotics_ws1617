@@ -5,7 +5,7 @@ __Assignment: 3__
 |  Name                      | MatrikelNr.   | Mail                       |
 |----------------------------|---------------|----------------------------|
 | Alexander Hinze-Hüttl      | 4578322       | hinze.alex@gmail.com       |
-| Sinur Sama                 |  TBA          |          TBA               |
+| Sinur Sama                 | 4557050       | sinur1992@hotmail.de       |              |
 
 ## 1. Representations
 
